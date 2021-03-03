@@ -6,44 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .body{
-            line-height: 1;
-            max-width: 100%;
+        .main-body{
+            line-height: 1.4;
+            background-color: lightgray;
+            width: 500px;
             margin: auto;
-            text-align: center;
-
-        };
+        }
         .form-centrum{
+            padding: 2.5rem 2.5rem;
+            width: 500px;
             margin: auto;
+            background-color: lightseagreen;
+        }
+        .form-input{
+            margin: 0 auto 1.25rem auto;
+            padding: 0.25rem;
         }
         .form-section{
             display: block;
-            margin: auto;
-            padding: 0.25rem;
-        
+            width: 90%;
+            height: 2rem;
+            padding: 0.25rem 0.75rem;
+            background-color: #fff;
         }
+        .title-description{
+            text-align: center;
+        }
+        .ending-submit{
+            width: 100%;
+            height: 2rem;
+            background-color: red;
+        }
+        .form-panel{
+            margin: 0 auto 1.25rem auto;
+            padding: 0.25rem;
+        }
+
+        .comments-panel{
+            width: 98.5%;
+            resize: vertical;
+            min-height: 120px;  
+        }
+
     </style>
 </head>
-<body class="body">
-    <div>
-        <header>
+<body class="main-body">
+        <header class="title-description">
             <h1 id="title">freeCodeCamp Survey Form</h1>
             <p id="description">Thank you for talking the time to help us improve the platform</p>
         </header>
         <form class="form-centrum" id="survey-form">
-            <div>
-                <label id="name" for="name">Name</label>
+            <div class="form-input">
+                <label id="name-label" for="name">Name</label>
                 <input class="form-section" type="text" id="name" name="name" placeholder="Enter your name">
             </div>
-            <div>
-                <label id="email" for="email">Email</label>
+            <div class="form-input">
+                <label id="email-label" for="email">Email</label>
                 <input class="form-section" type="text" id="email" name="email" placeholder="Enter your Email">
             </div>
-            <div>
-                <label>Age (optional)</label>
-                <input class="form-section" type="text" id="text" name="age" placeholder="Age">
+            <div class="form-input">
+                <label id="number-label" type="text">Age (optional)</label>
+                <input class="form-section" type="text" id="number" name="age" placeholder="Age">
             </div>
-            <div>
+            <div class="form-panel">
                 <p>Which option best describes your current role?</p>
                 <select class="form-section" name="role" required>
                     <option disabled selected value>Select current role</option>
@@ -54,7 +79,7 @@
                     <option value="other">Other</option>
                 </select>        
             </div>
-            <div>
+            <div class="form-checkbox">
                 <p>Would you recommend freeCodeCamp to a friend?</p>
                 <label>
                     <input type="radio" value="definitely">
@@ -69,7 +94,7 @@
                     Not sure
                 </label>
             </div>
-            <div>
+            <div class="form-panel">
                 <p>What is your favorite feature of freeCodeCamp?</p>
                 <select class="form-section" name="favorite" required>Select an option
                     <option disabled selected value>Select an option</option>
@@ -79,32 +104,29 @@
                     <option value="source">Open Source</option>
                 </select>        
             </div>
-            <div>
+            <div class="form-checkbox">
                 <p>What would you like to see improved? (Check all that apply)</p>
                 <label for="checkbox">
                     <input type="checkbox"> Front-end Projects    
-                    <br><input type="checkbox"> Back-end Projects 
-                    <br><input type="checkbox"> Data Visualization 
-                    <br><input type="checkbox"> Challenges
-                    <br><input type="checkbox"> Open Source Community
-                    <br><input type="checkbox"> Gitter help rooms
-                    <br><input type="checkbox"> Videos
-                    <br><input type="checkbox"> City Meetups
-                    <br><input type="checkbox"> Wiki
-                    <br><input type="checkbox"> Forum
-                    <br><input type="checkbox"> Additional Courses
+                    <br><input type="checkbox" value="back-end projects"> Back-end Projects 
+                    <br><input type="checkbox" value="data visualization"> Data Visualization 
+                    <br><input type="checkbox" value="challenges"> Challenges
+                    <br><input type="checkbox" value="open source community"> Open Source Community
+                    <br><input type="checkbox" value="gitter help rooms"> Gitter help rooms
+                    <br><input type="checkbox" value="videos"> Videos
+                    <br><input type="checkbox" value="city meetups"> City Meetups
+                    <br><input type="checkbox" value="wiki"> Wiki
+                    <br><input type="checkbox" value="forum"> Forum
+                    <br><input type="checkbox" value="additional courses"> Additional Courses
                 </label>
             </div>
             <div>
                 <p>Any comments or suggestions?</p>
-                <textarea id="suggestions" name="suggestions" placeholder="Enter your comment here..."></textarea>
+                <textarea class="comments-panel" id="suggestions" name="suggestions" placeholder="Enter your comment here..."></textarea>
             </div>
             <div>
-                SUBMIT Przycisk ?????
+                <button class="ending-submit" id="submit">SUBMIT</button>
             </div>
         </form>
-    </div>
 </body>
 </html>
-
-
